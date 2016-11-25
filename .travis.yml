@@ -1,9 +1,13 @@
+sudo: required
+dist: trusty
+
 language: cpp
+
 
 compiler: gcc
 
 before_install: 
-    - sudo apt-get -qq udpate
+    #    - sudo apt-get -qq udpate
     - sudo apt-get install -y lib32ncurses5 lib32bz2-1.0 ia32-libs
     - ia32-libs-multiarch
     - libgphoto2-2:i386
@@ -30,3 +34,9 @@ script:
  - curl -C- https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 -O gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
  - cd /usr/local
  - sudo tar xjf /tmp/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
+ - pwd
+ - mdkir build
+ - cd build
+ - ../configure
+ - make
+ - make qemu
