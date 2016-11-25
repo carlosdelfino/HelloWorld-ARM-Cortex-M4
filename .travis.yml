@@ -8,15 +8,7 @@ compiler: gcc
 
 before_install: 
     #    - sudo apt-get -qq udpate
-    - sudo apt-get install -y lib32ncurses5 lib32bz2-1.0 ia32-libs
-    - ia32-libs-multiarch
-    - libgphoto2-2:i386
-    - libc6-armel-cross 
-    - libc6-dev-armel-cross
-    - binutils-arm-linux-gnueabi
-    - libncurses5-dev
-    - curl
-    - libsane:i386
+    - sudo apt-get install -y lib32ncurses5 lib32bz2-1.0 lib32z1 ia32-libs-multiarch libgphoto2-2:i386 libc6-armel-cross libc6-dev-armel-cross binutils-arm-linux-gnueabi libncurses5-dev curl libsane:i386
     
 addons:
   apt:
