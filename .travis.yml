@@ -16,6 +16,7 @@ addons:
     - lib32ncurses5 
     - lib32bz2-1.0
     - ia32-libs
+    - ia32-libs-multiarch
     - libc6-armel-cross 
     - libc6-dev-armel-cross
     - binutils-arm-linux-gnueabi
