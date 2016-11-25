@@ -2,6 +2,18 @@ language: cpp
 
 compiler: gcc
 
+before_install: 
+    - sudo apt-get -qq udpate
+    - sudo apt-get install -y lib32ncurses5 lib32bz2-1.0 ia32-libs
+    - ia32-libs-multiarch
+    - libgphoto2-2:i386
+    - libc6-armel-cross 
+    - libc6-dev-armel-cross
+    - binutils-arm-linux-gnueabi
+    - libncurses5-dev
+    - curl
+    - libsane:i386
+    
 addons:
   apt:
     sources:
@@ -13,16 +25,6 @@ addons:
     - gcc-5
     - g++-5
     - clang-3.6
-    - lib32ncurses5 
-    - lib32bz2-1.0
-    - ia32-libs
-    - ia32-libs-multiarch
-    - libc6-armel-cross 
-    - libc6-dev-armel-cross
-    - binutils-arm-linux-gnueabi
-    - libncurses5-dev
-    - curl
-    
 script:
  - cd /tmp
  - curl -C- https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 -O gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
