@@ -32,3 +32,12 @@
 *.out
 *.app
 /.settings/
+/configure
+/missing
+/install-sh
+/aclocal.m4
+/compile
+/Makefile.in
+/config.status
+/Makefile
+/.autotools
