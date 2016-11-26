@@ -27,6 +27,7 @@ script:
  - pwd
  - ls
  - autoreconf -i 
+ - automake --add-missing
  - mkdir build
  - cd build
  - PATH=/usr/local/:$PATH ../configure
