@@ -29,8 +29,11 @@ script:
  - ls
  - cd
  - pwd
+ - ls
  - mkdir build
  - cd build
+ - ls
+ - autoconf -iv
  - PATH=/usr/local/:$PATH ../configure
  - PATH=/usr/local/:$PATH make
  - PATH=/usr/local/:$PATH make qemu
