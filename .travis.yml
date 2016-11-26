@@ -22,18 +22,13 @@ addons:
     - g++-5
     - clang-3.6
 script:
- - cd /tmp
- - curl -C- https://launchpadlibrarian.net/287101520/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 -o gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
- - cd /usr/local
- - sudo tar -jxvf /tmp/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
- - ls
- - cd
+ - curl -C- https://launchpadlibrarian.net/287101520/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 -o /tmp/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
+ - sudo tar -jxvf /tmp/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 -C /usr/local
  - pwd
  - ls
  - mkdir build
  - cd build
- - ls
- - autoconf -iv
+ - autoreconf -i -v -v
  - PATH=/usr/local/:$PATH ../configure
  - PATH=/usr/local/:$PATH make
  - PATH=/usr/local/:$PATH make qemu
